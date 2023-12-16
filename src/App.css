@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.c {
+  position: absolute;
+  color: white;
+  left: 10%;
+  transform: translateX(0);
+  cursor: pointer;
+}
+.f {
+  position: absolute;
+  color: white;
+  right: 25%;
+  transform: translateX(50%);
+  cursor: pointer;
+}
+
+td:last-child {
+  color: #219dec;
+  font-weight: bold;
+}
+
+td {
+  padding-top: 0.7rem;
+}

@@ -16,14 +16,14 @@ function Forecast({forecastData}) {
     // Call the function to filter the forecast data
     const filteredForecast = filterForecastByFirstObjTime(forecastData?.list);
     return (
-        <div className='mt-8'>
+        <div className='mt-2'>
             <h1 className='text-[#9C9A9C]'>
               Extended Forecast
             </h1>
             
               {
                 filteredForecast.length > 0 ? (
-                  <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 lg:gap-x-2 my-4'>
+                  <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 lg:gap-x-2 my-4 '>
                     {
                       filteredForecast.map((forecast, index) => {
                           // Extract the day from the date of the forecast data
@@ -31,7 +31,7 @@ function Forecast({forecastData}) {
                           const day = date.toLocaleDateString("en-US", {weekday:"short"})
 
                           return (
-                            <div key={index} className='bg-[#2493DF]  rounded p-2 text-center text-white font-semibold'>
+                            <div key={index} className='bg-[#2493DF] rounded p-2 text-center text-white font-semibold lg:text-xs xl:text-base'>
                                 <h1>{day}</h1>
                                 <div className='grid place-items-center p-0'>
                                     <img src={`https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`} alt="img2" className='w-[100px]'/>

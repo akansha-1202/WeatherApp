@@ -71,14 +71,14 @@ function Weather() {
       };
 
       return (
-            <div className="w-full bg-gradient-to-b from-[#2493DF] from-10% to-[#A2ABBA] grid place-items-center py-9">
+            <div className="w-full h-[100vh] bg-gradient-to-b from-[#2493DF] from-10% to-[#A2ABBA] grid place-items-center lg:py-2">
               {/* center box */}
-                <div className="w-[80%] sm:w-[60%] border-2 border-white rounded-lg shadow-md shadow-white px-4 py-8 flex flex-col justify-between">
+                <div className="w-[80%] sm:w-[60%] h-[100vh] lg:h-[83vh] border-2 border-white rounded-lg shadow-md shadow-white px-4 py-4 flex flex-col justify-between">
                     {/* search box */}
                     <Form city={city} setCity={setCity} handleCitySearch={handleCitySearch} loadings={loadings}/>
 
                     {/* weather and forecast details */}
-                    <div className="w-full bg-white rounded h-[230vh] md:h-[175vh] lg:h-[88vh] px-4 py-4 mt-2">
+                    <div className="relative w-full bg-white rounded h-[88vh] px-4 py-4 mt-2 ">
                         {/* current weather heading */}
                         <ToggleBtn toggleUnit={toggleUnit} unit={unit}/>
 
@@ -98,10 +98,10 @@ function Weather() {
                                     { forecastError ? (
                                       <div>{forecastError}</div>
                                      ) : (
-                                      <>
+                                      <div className="absolute h-[90%] lg:h-auto w-[90%] sm:w-[92%] lg:w-[96%] overflow-y-scroll lg:overflow-hidden">
                                         <WeatherDetails citySearchData={citySearchData}/>
                                         <Forecast forecastData={forecastData}/>
-                                      </>
+                                      </div>
                                     )}
                                   </>
                                 )

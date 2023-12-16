@@ -73,7 +73,7 @@ function Weather() {
       return (
             <div className="w-full h-[100vh] bg-gradient-to-b from-[#2493DF] from-10% to-[#A2ABBA] grid place-items-center lg:py-2">
               {/* center box */}
-                <div className="w-[80%] sm:w-[60%] h-[95vh] lg:h-[83vh] border-2 border-white rounded-lg shadow-md shadow-white px-4 py-4 flex flex-col justify-between">
+                <div className="w-[84%] sm:w-[62%] h-[92vh] lg:h-[83vh] border-2 border-white rounded-lg shadow-md shadow-white px-4 py-4 flex flex-col justify-between">
                     {/* search box */}
                     <Form city={city} setCity={setCity} handleCitySearch={handleCitySearch} loadings={loadings}/>
 

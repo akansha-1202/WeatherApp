@@ -71,7 +71,7 @@ function Weather() {
       };
 
       return (
-            <div className="w-full h-[100vh] bg-gradient-to-b from-[#2493DF] from-10% to-[#A2ABBA] grid place-items-center lg:py-2">
+            <div className="w-full sm:h-[100vh] bg-gradient-to-b from-[#2493DF] from-10% to-[#A2ABBA] grid place-items-center lg:py-2">
               {/* center box */}
                 <div className="w-[84%] sm:w-[62%] h-[92vh] lg:h-[83vh] border-2 border-white rounded-lg shadow-md shadow-white px-4 py-4 flex flex-col justify-between">
                     {/* search box */}

@@ -14,7 +14,7 @@ function WeatherDetails({citySearchData}) {
       {
         citySearchData && citySearchData.data ? (
           <div className='grid lg:grid-cols-2 p-4 text-[#219DEC]'>
-            <div className='lg:border-r-2'>
+            <div className='lg:border-r-2 pr-6'>
                 <h1 className='font-bold text-lg'>
                    {citySearchData.data.name}
                 </h1>

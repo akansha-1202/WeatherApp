@@ -15,7 +15,6 @@ function Forecast({forecastData}) {
 
     // Call the function to filter the forecast data
     const filteredForecast = filterForecastByFirstObjTime(forecastData?.list);
-
     return (
         <div className='mt-8'>
             <h1 className='text-[#9C9A9C]'>
@@ -32,7 +31,7 @@ function Forecast({forecastData}) {
                           const day = date.toLocaleDateString("en-US", {weekday:"short"})
 
                           return (
-                            <div className='bg-[#2493DF] rounded p-2 text-center text-white font-semibold'>
+                            <div key={index} className='bg-[#2493DF]  rounded p-2 text-center text-white font-semibold'>
                                 <h1>{day}</h1>
                                 <div className='grid place-items-center p-0'>
                                     <img src={`https://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`} alt="img2" className='w-[100px]'/>

@@ -71,19 +71,19 @@ function Weather() {
       };
 
       return (
-            <div className="w-full h-[100vh] bg-gradient-to-b from-[#2493DF] from-10% to-[#A2ABBA] grid place-items-center py-9">
+            <div className="w-full bg-gradient-to-b from-[#2493DF] from-10% to-[#A2ABBA] grid place-items-center py-9">
               {/* center box */}
-                <div className="w-[80%] h-[100%] sm:w-[60%] border-2 border-white rounded-lg shadow-md shadow-white px-4 py-8 flex flex-col justify-between">
+                <div className="w-[80%] sm:w-[60%] border-2 border-white rounded-lg shadow-md shadow-white px-4 py-8 flex flex-col justify-between">
                     {/* search box */}
                     <Form city={city} setCity={setCity} handleCitySearch={handleCitySearch} loadings={loadings}/>
 
                     {/* weather and forecast details */}
-                    <div className="w-full bg-white rounded h-[92%] px-4 py-4 mt-2">
+                    <div className="w-full bg-white rounded h-[230vh] md:h-[175vh] lg:h-[88vh] px-4 py-4 mt-2">
                         {/* current weather heading */}
                         <ToggleBtn toggleUnit={toggleUnit} unit={unit}/>
 
                         { loadings ? (
-                            <div className="h-[80%] grid place-items-center"> 
+                            <div className="h-[30%] lg:h-[80%] grid place-items-center"> 
                                 <SphereSpinner loadings={loadings} color="#2fa5ed" size={50}/>
                             </div>
                           ) : (
